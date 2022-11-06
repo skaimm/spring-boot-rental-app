@@ -39,9 +39,6 @@ public class RentalService {
         } else if (isNotEmpty(searchParameters.getNear())) {
             String[] coordinates = searchParameters.getNear().split(",");
             return rentalRepository.findNearRentals(nearDistance, Double.parseDouble(coordinates[0]), Double.parseDouble(coordinates[1]), pageable);
-        } else if (searchParameters.getSort() != null && searchParameters.getSort().equals("price")) {
-            Pageable sortedPageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by("pricePerDay"));
-            return rentalRepository.findAll(sortedPageable);
         } else if (searchParameters.getPage() != null && !searchParameters.getPage().isEmpty()) {
             Pageable offsetLimitPageable = new OffsetBasedPageRequest(searchParameters.getPage().get("offset"), searchParameters.getPage().get("offset"));
             return rentalRepository.findAll(offsetLimitPageable);

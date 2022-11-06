@@ -24,6 +24,4 @@ public class SearchParameters {
 
     private HashMap<String, Integer> page;
 
-    private String sort;
-
 }
