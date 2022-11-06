@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  tomcat:
+    relaxed-query-chars: [ '[',']' ]
+
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-54-228-32-29.eu-west-1.compute.amazonaws.com:5432/dcde7g2sngateq
+    username: hsryonqmxjdlhn
+    password: 8974a03928f88a5bc72659cad2379556890546e69b97ac02115da60421509786
+    hikari:
+      minimum-idle: 2
+      maximum-pool-size: 10
+  jpa:
+    hibernate:
+      ddl-auto: update
+  flyway:
+    locations: "classpath:db/migration"
+
+flyway:
+  baseline-on-migrate: true
+
+rental:
+  near:
+    distance: 100
+
+stacktrace:
+  app:
+    packages:
