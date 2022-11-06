@@ -1,4 +1,3 @@
-# spring-boot-rental-app
 # Spring Boot Rental App
 Its a JSON API that returns a list of vehicles for rental that can be filtered, sorted, and paginated.
 
