@@ -11,5 +11,5 @@ Its a JSON API that returns a list of vehicles for rental that can be filtered, 
 - `rvs?sort=price`
 - `rvs/RV_ID`
 
-##Use this Heroku url for example responds 
+## Use this Heroku url for example responds 
 - https://spring-boot-rental-app.herokuapp.com/rvs
